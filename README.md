@@ -14,6 +14,7 @@ that, given integers K and M and an array A consisting of N integers, returns an
 
 For example, given integers K = 3, M = 5 and the following array A:
 
+```
   A[0] = 2
   A[1] = 1
   A[2] = 3
@@ -21,8 +22,11 @@ For example, given integers K = 3, M = 5 and the following array A:
   A[4] = 2
   A[5] = 2
   A[6] = 3
+```  
+  
 the function should return [2, 3]. If we choose segment A[1], A[2], A[3] then we get the following array A:
 
+```
   A[0] = 2
   A[1] = 2
   A[2] = 4
@@ -30,8 +34,10 @@ the function should return [2, 3]. If we choose segment A[1], A[2], A[3] then we
   A[4] = 2
   A[5] = 2
   A[6] = 3
+```  
 and 2 is the leader of this array. If we choose A[3], A[4], A[5] then A will appear as follows:
 
+```
   A[0] = 2
   A[1] = 1
   A[2] = 3
@@ -39,15 +45,18 @@ and 2 is the leader of this array. If we choose A[3], A[4], A[5] then A will app
   A[4] = 3
   A[5] = 3
   A[6] = 3
+```  
 and 3 will be the leader.
 
 And, for example, given integers K = 4, M = 2 and the following array:
 
+```
   A[0] = 1
   A[1] = 2
   A[2] = 2
   A[3] = 1
   A[4] = 2
+```  
 the function should return [2, 3], because choosing a segment A[0], A[1], A[2], A[3] and A[1], A[2], A[3], A[4] turns 2 and 3 into the leaders, respectively.
 
 Write an efficient algorithm for the following assumptions:
