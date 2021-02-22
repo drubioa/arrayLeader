@@ -72,14 +72,20 @@ public class Solution {
      */
     public static Integer findLeader(final int[] A) {
 
+        if(A.length == 0) {
+            return null;
+        }
+        if(A.length == 1) {
+            return A[0];
+        }
         int[] copy = Arrays.copyOf(A, A.length);
         Arrays.sort(copy);
         int leader = A[0];
         int leaderCont = 1;
         int aux = copy[0];
-        int cont = 0;
+        int cont = 1;
 
-        for(int i = 0; i < copy.length; i++) {
+        for(int i = 1; i < copy.length; i++) {
             if(aux == copy[i]) {
                 cont++;
                 if(cont >= leaderCont && leader != aux) {

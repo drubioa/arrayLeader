@@ -24,6 +24,24 @@ public class SolutionTest {
         assertArrayEquals(solutionExpected, result);
     }
 
+    @Test
+    public void testSingleElement() {
+
+        final int[] A = {1};
+        final int[] solutionExpected = {1};
+        int[] result = Solution.solution(2, 1, A);
+        assertArrayEquals(solutionExpected, result);
+    }
+
+    @Test
+    public void testEmptyElement() {
+
+        final int[] A = {};
+        final int[] solutionExpected = {};
+        int[] result = Solution.solution(2, 1, A);
+        assertArrayEquals(solutionExpected, result);
+    }
+
     @Test(expected = InvalidArrayException.class)
     public void testArrayValueGreaterThanM() {
         final int[] A = {1, 2, 2 , 1 , 3 };
