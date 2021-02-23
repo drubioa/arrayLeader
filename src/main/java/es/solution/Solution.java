@@ -37,7 +37,7 @@ public class Solution {
                 }
             }
         }
-        return leadersList.stream().mapToInt(i -> i).toArray();
+        return leadersList.stream().sorted().mapToInt(i -> i).toArray();
     }
 
     private static void validateArrayValues(final int M, final int[] A) {
